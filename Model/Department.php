@@ -4,7 +4,12 @@
 namespace AHT\Portfolio\Model;
 
 
-class Department
-{
+use Magento\Framework\Model\AbstractModel;
 
+class Department extends AbstractModel
+{
+    protected function _construct()
+    {
+       $this->_init('AHT\Portfolio\Model\ResourceModel\Department');
+    }
 }
